@@ -1,0 +1,43 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}Home | My Portfolio{% endblock %}
+
+{% block content %}
+
+    <!-- ===== HERO / INTRO SECTION ===== -->
+    <section class="hero">
+        <img src="{% static 'images/profile.jpg' %}" alt="My profile picture" class="profile-pic">
+        <h1>Hi, I'm Your Name</h1>
+        <p class="intro">
+            I'm a beginner web developer learning Django. I enjoy building small
+            projects to practice Python, HTML, and CSS, and I'm slowly getting
+            more comfortable turning ideas into working websites.
+        </p>
+        <a href="{% url 'projects' %}" class="btn">View My Projects</a>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Django</span>
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">Git & GitHub</span>
+            <span class="skill-badge">SQL</span>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION (bonus feature) ===== -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Have a question or just want to connect? Reach out below.</p>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <a href="https://github.com/yourusername" target="_blank" class="btn btn-outline">
+            Visit My GitHub
+        </a>
+    </section>
+
+{% endblock %}
